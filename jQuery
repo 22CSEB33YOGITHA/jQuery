@@ -1,0 +1,54 @@
+--> 1. Hover effect
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hover Effect</title>
+<style>
+  #hoverElement {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+</style>
+</head>
+<body>
+<div id="hoverElement"></div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hoverElement").hover(function(){
+    $(this).css("opacity", "0.3");
+  }, function(){
+    $(this).css("opacity", "1");
+  });
+});
+</script>
+</body>
+</html>
+
+
+--> 2. Count the length of the text
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Length</title>
+</head>
+<body>
+<textarea id="textInput"></textarea><br>
+<button id="countButton">Count Text Length</button><br><br>
+<div id="textLength"></div>
+<script>
+document.getElementById("countButton").addEventListener("click", function() {
+  var text = document.getElementById("textInput").value;
+  var textLength = text.length;
+  document.getElementById("textLength").innerText = "Length of text: " + textLength;
+});
+</script>
+</body>
+</html>
